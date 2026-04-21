@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --cobalt: #0047ab;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", "SF Pro Display", system-ui, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .glass-card-dark {
+    background: rgba(0, 71, 171, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 71, 171, 0.15);
+  }
+
+  .cobalt-gradient {
+    background: linear-gradient(135deg, #0047ab 0%, #003a8c 100%);
+  }
+
+  .cobalt-gradient-soft {
+    background: linear-gradient(135deg, #ebf0fb 0%, #c2d2f5 100%);
+  }
+}
