@@ -21,9 +21,44 @@ const miniStats = [
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-white overflow-hidden flex flex-col justify-center pt-20 pb-16">
-      {/* Subtle background orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-cobalt-50 rounded-full opacity-60 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-cobalt-100 rounded-full opacity-40 blur-3xl pointer-events-none" />
+      {/* Animated background orbs for a premium glow */}
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          x: [0, 40, 0],
+          y: [0, -30, 0],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-cobalt-200/30 rounded-full blur-[120px] pointer-events-none"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.1, 1],
+          x: [0, -50, 0],
+          y: [0, 40, 0],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] bg-cobalt-300/20 rounded-full blur-[100px] pointer-events-none"
+      />
+      <motion.div
+        animate={{
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-50/40 rounded-full blur-[140px] pointer-events-none"
+      />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
         {/* Top badge */}
