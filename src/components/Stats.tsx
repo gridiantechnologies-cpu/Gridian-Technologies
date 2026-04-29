@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import { motion, useInView, animate } from "framer-motion";
 
 const stats = [
   { value: "50+", label: "Projects Delivered", sub: "across 15+ industries" },
@@ -11,6 +11,38 @@ const stats = [
   { value: "15+", label: "Team Members", sub: "engineers & designers" },
   { value: "3x", label: "Avg. ROI Delivered", sub: "for growth-stage clients" },
 ];
+
+function AnimatedNumber({ value, inView }: { value: string; inView: boolean }) {
+  const [displayValue, setDisplayValue] = useState("0");
+
+  useEffect(() => {
+    if (!inView) return;
+
+    // Match optional prefix (like "0"), the number, and any suffix (like "+", "%", "x")
+    const match = value.match(/^(0*)(\d+)(.*)$/);
+    
+    if (!match) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const prefix = match[1];
+    const num = parseInt(match[2], 10);
+    const suffix = match[3];
+
+    const controls = animate(0, num, {
+      duration: 2.5,
+      ease: [0.16, 1, 0.3, 1], // Very smooth, premium deceleration curve
+      onUpdate: (v) => {
+        setDisplayValue(`${prefix}${Math.floor(v)}${suffix}`);
+      },
+    });
+
+    return controls.stop;
+  }, [value, inView]);
+
+  return <>{displayValue}</>;
+}
 
 export default function Stats() {
   const ref = useRef(null);
@@ -45,7 +77,7 @@ export default function Stats() {
               className="glass-card-dark rounded-3xl p-8"
             >
               <div className="text-4xl sm:text-5xl font-bold text-cobalt-300 mb-2 tracking-tight">
-                {stat.value}
+                <AnimatedNumber value={stat.value} inView={inView} />
               </div>
               <div className="text-white font-semibold text-base mb-1">{stat.label}</div>
               <div className="text-white/40 text-xs">{stat.sub}</div>
