@@ -109,6 +109,9 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 // ─── Root Layout ──────────────────────────────────────────────────────────────
