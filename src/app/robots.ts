@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://gridiantechnologies.com";
+const BASE_URL = "https://gridian-technologies.vercel.app";
 
 /**
  * Next.js 15 built-in robots — auto-served at /robots.txt

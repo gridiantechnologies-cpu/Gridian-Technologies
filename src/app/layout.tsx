@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 };
 
 // ─── Site-wide Metadata ───────────────────────────────────────────────────────
-const SITE_URL = "https://gridiantechnologies.com";
+const SITE_URL = "https://gridian-technologies.vercel.app";
 const SITE_NAME = "Gridian Technologies";
 const SITE_TITLE = "Gridian Technologies | Premium Digital Agency";
 const SITE_DESCRIPTION =

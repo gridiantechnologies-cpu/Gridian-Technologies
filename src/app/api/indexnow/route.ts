@@ -17,7 +17,7 @@ import { NextRequest, NextResponse } from "next/server";
  * Ref: https://www.indexnow.org/documentation
  */
 
-const SITE_HOST = "gridiantechnologies.com";
+const SITE_HOST = "gridian-technologies.vercel.app";
 const INDEXNOW_API = "https://api.indexnow.org/indexnow";
 
 export async function POST(req: NextRequest) {
