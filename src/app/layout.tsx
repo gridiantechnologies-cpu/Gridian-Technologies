@@ -96,7 +96,7 @@ export const metadata: Metadata = {
   // ── Search Engine Verification ─────────────────────────────────────────────
   // Paste your real codes from Search Console / Bing once you have them:
   verification: {
-    google: "PASTE_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE_HERE",
+    google: "36e2637eaabb58a0",
     // yandex: "PASTE_YANDEX_VERIFICATION_CODE_HERE",
     other: {
       "msvalidate.01": "PASTE_BING_WEBMASTER_VERIFICATION_CODE_HERE",
