@@ -11,8 +11,8 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Gridian Technologies",
-    url: "https://gridian-technologies.vercel.app",
-    logo: "https://gridian-technologies.vercel.app/opengraph-image.png",
+    url: "https://gridiantechnologies-main.vercel.app",
+    logo: "https://gridiantechnologies-main.vercel.app/opengraph-image.png",
     description:
       "Premium digital agency building world-class web apps, AI solutions, cloud infrastructure, and mobile experiences.",
     foundingDate: "2023",
