@@ -102,6 +102,13 @@ export default function Hero() {
             and cloud infrastructure for the most ambitious brands in the world.
           </motion.p>
 
+          {/* SEO brand identity — visually subtle, semantically clear */}
+          <p className="sr-only">
+            Gridian Technologies is a digital technology company in India providing web development,
+            AI solutions, SaaS development, cloud infrastructure, mobile app development, and digital
+            business solutions. Official website of Gridian Technologies: gridiantechnologies.com
+          </p>
+
           {/* CTA Buttons */}
           <motion.div
             custom={3}

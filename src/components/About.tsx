@@ -33,9 +33,7 @@ export default function About() {
               <span className="text-cobalt-500">for Visionaries.</span>
             </h2>
             <p className="text-neutral-500 text-base leading-relaxed mb-6">
-              Gridian Technologies was founded on a simple belief: every business deserves a
-              world-class digital partner. We are a team of engineers, designers, and strategists
-              who obsess over craft and care deeply about outcomes.
+              Gridian Technologies is a technology and digital solutions company focused on building web applications, SaaS products, AI-powered business tools, automation systems, cloud infrastructure, and mobile applications.
             </p>
             <p className="text-neutral-500 text-base leading-relaxed mb-10">
               From seed-stage startups to Fortune 500 enterprises, we&apos;ve shipped products used by

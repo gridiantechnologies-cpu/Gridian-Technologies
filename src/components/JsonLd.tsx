@@ -11,28 +11,36 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Gridian Technologies",
-    url: "https://gridiantechnologies-main.vercel.app",
-    logo: "https://gridiantechnologies-main.vercel.app/opengraph-image.png",
+    url: "https://gridiantechnologies.com",
+    logo: "https://gridiantechnologies.com/opengraph-image.png",
     description:
-      "Premium digital agency building world-class web apps, AI solutions, cloud infrastructure, and mobile experiences.",
-    foundingDate: "2023",
+      "Gridian Technologies is a digital technology company in India providing web development, AI solutions, SaaS development, cloud infrastructure, mobile app development, and digital business solutions.",
+    foundingDate: "2024",
     areaServed: "Worldwide",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IN",
+    },
     serviceType: [
       "Web Application Development",
       "AI Solutions",
+      "SaaS Development",
       "Cloud Infrastructure",
       "Mobile App Development",
+      "Digital Business Solutions",
+      "Automation Systems",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
       availableLanguage: "English",
     },
-    // Add your social profiles here once available:
     sameAs: [
+      // Add your real social profile URLs below:
+      // "https://www.facebook.com/gridiantechnologies",
+      // "https://www.linkedin.com/company/gridian-technologies",
       // "https://twitter.com/gridiantech",
-      // "https://linkedin.com/company/gridian-technologies",
-      // "https://github.com/gridiantech",
+      // "https://github.com/gridiantechnologies-cpu",
     ],
   };
 
@@ -40,9 +48,9 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Gridian Technologies",
-    url: "https://gridian-technologies.vercel.app",
+    url: "https://gridiantechnologies.com",
     description:
-      "We build world-class digital products — web apps, AI solutions, cloud infrastructure, and mobile experiences — for the brands of tomorrow.",
+      "Gridian Technologies is a digital technology company in India providing web development, AI solutions, SaaS development, cloud infrastructure, mobile app development, and digital business solutions.",
     inLanguage: "en-US",
   };
 

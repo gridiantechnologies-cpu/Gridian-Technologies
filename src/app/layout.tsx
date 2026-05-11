@@ -20,11 +20,12 @@ export const viewport: Viewport = {
 };
 
 // ─── Site-wide Metadata ───────────────────────────────────────────────────────
-const SITE_URL = "https://gridiantechnologies-main.vercel.app";
+const SITE_URL = "https://gridiantechnologies.com";
 const SITE_NAME = "Gridian Technologies";
-const SITE_TITLE = "Gridian Technologies | Premium Digital Agency";
+const SITE_TITLE =
+  "Gridian Technologies | Web Development, AI Solutions & Digital Agency in India";
 const SITE_DESCRIPTION =
-  "We build world-class digital products — web apps, AI solutions, cloud infrastructure, and mobile experiences — for the brands of tomorrow.";
+  "Gridian Technologies is a digital technology company in India providing web development, AI solutions, SaaS development, cloud infrastructure, mobile app development, and digital business solutions. Official website: gridiantechnologies.com";
 const OG_IMAGE = `${SITE_URL}/opengraph-image.png`;
 
 export const metadata: Metadata = {
@@ -36,14 +37,19 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "digital agency",
-    "web development",
-    "AI solutions",
+    "Gridian Technologies",
+    "digital agency India",
+    "web development India",
+    "AI solutions India",
+    "SaaS development",
     "cloud infrastructure",
     "mobile app development",
+    "web application development",
+    "digital business solutions",
+    "automation systems",
     "Next.js agency",
     "React development",
-    "Gridian Technologies",
+    "gridiantechnologies.com",
   ],
 
   // ── Robots ─────────────────────────────────────────────────────────────────
