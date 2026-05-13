@@ -20,17 +20,12 @@ const nextConfig = {
   },
 
   // ── Canonical redirects ──────────────────────────────────────────────────────
+  // NOTE: www → non-www is handled by Vercel domain settings (edge-level 301).
+  // We only handle *.vercel.app → production as a belt-and-suspenders fallback.
   async redirects() {
     return [
-      // www → non-www (301) — consolidates all link juice to bare domain
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: `www.${PRODUCTION_DOMAIN}` }],
-        destination: `https://${PRODUCTION_DOMAIN}/:path*`,
-        permanent: true,
-      },
       // Any *.vercel.app preview URL → production domain (301)
-      // Catches gridiantechnologies-main.vercel.app, gridian-technologies-kaf9.vercel.app, etc.
+      // Catches gridian-technologies.vercel.app and any future preview deployments.
       {
         source: "/:path*",
         has: [{ type: "host", value: "(.+)\\.vercel\\.app" }],
