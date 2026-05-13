@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -36,8 +37,15 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-xl bg-cobalt-500 flex items-center justify-center">
-            <Zap className="w-4 h-4 text-white" strokeWidth={2.5} />
+          <div className="w-8 h-8 rounded-xl overflow-hidden flex items-center justify-center">
+            <Image
+              src="/icon.png"
+              alt="Gridian Technologies Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8 object-cover"
+              priority
+            />
           </div>
           <span className="font-bold text-lg tracking-tight">
             Gridian
