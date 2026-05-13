@@ -38,6 +38,8 @@ export default function JsonLd() {
     sameAs: [
       "https://github.com/gridiantechnologies-cpu",
       "https://www.linkedin.com/in/gridian-technologies-31659840a",
+      "https://x.com/gridiantechgt",
+      "https://discord.gg/ZVYfmWgZJ",
     ],
   };
 
