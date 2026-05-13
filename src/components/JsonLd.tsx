@@ -40,7 +40,7 @@ export default function JsonLd() {
       // "https://www.facebook.com/gridiantechnologies",
       // "https://www.linkedin.com/company/gridian-technologies",
       // "https://twitter.com/gridiantech",
-      // "https://github.com/gridiantechnologies-cpu",
+      "https://github.com/gridiantechnologies-cpu",
     ],
   };
 

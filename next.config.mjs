@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+const PRODUCTION_DOMAIN = "gridiantechnologies.com";
+
 const nextConfig = {
   // ── Compression ─────────────────────────────────────────────────────────────
   compress: true,
@@ -16,9 +19,34 @@ const nextConfig = {
     remotePatterns: [],
   },
 
+  // ── Canonical www → non-www redirect ────────────────────────────────────────
+  // Ensures https://www.gridiantechnologies.com → https://gridiantechnologies.com
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: `www.${PRODUCTION_DOMAIN}` }],
+        destination: `https://${PRODUCTION_DOMAIN}/:path*`,
+        permanent: true, // 301 redirect — tells Google the canonical domain
+      },
+    ];
+  },
+
   // ── Security + Performance Headers ──────────────────────────────────────────
   async headers() {
     return [
+      {
+        // Block Vercel preview domain from being indexed by Google.
+        // X-Robots-Tag: noindex prevents duplicate content penalties.
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "gridiantechnologies-main.vercel.app",
+          },
+        ],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
       {
         // Apply to all routes
         source: "/(.*)",
