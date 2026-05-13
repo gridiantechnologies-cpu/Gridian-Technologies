@@ -36,11 +36,8 @@ export default function JsonLd() {
       availableLanguage: "English",
     },
     sameAs: [
-      // Add your real social profile URLs below:
-      // "https://www.facebook.com/gridiantechnologies",
-      // "https://www.linkedin.com/company/gridian-technologies",
-      // "https://twitter.com/gridiantech",
       "https://github.com/gridiantechnologies-cpu",
+      "https://www.linkedin.com/in/gridian-technologies-31659840a",
     ],
   };
 
