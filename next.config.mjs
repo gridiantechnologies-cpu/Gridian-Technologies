@@ -19,15 +19,23 @@ const nextConfig = {
     remotePatterns: [],
   },
 
-  // ── Canonical www → non-www redirect ────────────────────────────────────────
-  // Ensures https://www.gridiantechnologies.com → https://gridiantechnologies.com
+  // ── Canonical redirects ──────────────────────────────────────────────────────
   async redirects() {
     return [
+      // www → non-www (301) — consolidates all link juice to bare domain
       {
         source: "/:path*",
         has: [{ type: "host", value: `www.${PRODUCTION_DOMAIN}` }],
         destination: `https://${PRODUCTION_DOMAIN}/:path*`,
-        permanent: true, // 301 redirect — tells Google the canonical domain
+        permanent: true,
+      },
+      // Any *.vercel.app preview URL → production domain (301)
+      // Catches gridiantechnologies-main.vercel.app, gridian-technologies-kaf9.vercel.app, etc.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "(.+)\\.vercel\\.app" }],
+        destination: `https://${PRODUCTION_DOMAIN}/:path*`,
+        permanent: true,
       },
     ];
   },
@@ -36,13 +44,14 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // Block Vercel preview domain from being indexed by Google.
-        // X-Robots-Tag: noindex prevents duplicate content penalties.
+        // Block ALL *.vercel.app subdomains from being indexed by Google.
+        // Covers: gridiantechnologies-main.vercel.app, gridian-technologies-kaf9.vercel.app
+        // and any future preview deployments.
         source: "/(.*)",
         has: [
           {
             type: "host",
-            value: "gridiantechnologies-main.vercel.app",
+            value: "(.+)\\.vercel\\.app",
           },
         ],
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
