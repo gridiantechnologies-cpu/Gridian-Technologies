@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://gridiantechnologies-main.vercel.app";
+const BASE_URL = "https://gridiantechnologies.com";
 
 /**
  * Next.js 15 built-in sitemap — auto-served at /sitemap.xml
