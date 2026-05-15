@@ -40,6 +40,9 @@ export default function JsonLd() {
       "https://www.linkedin.com/in/gridian-technologies-31659840a",
       "https://x.com/gridiantechgt",
       "https://discord.gg/ZVYfmWgZJ",
+      "https://www.instagram.com/gridian_technologies",
+      "https://www.facebook.com/people/GridianTechnologies-GridianTechnologies/pfbid0ewUeuCNYLvJGW4t6zW76repQeHgQ5xVvGXvTNZeZjwDRsivHKY5yoQ5ffgwUQdQCl/",
+      "https://youtube.com/@gridiantechnologies",
     ],
   };
 
